@@ -23,16 +23,17 @@ x 0
 
 '''
 
-while 1 :
-    word = input().lower()
+while 1 : # '#'을 input으로 받기 전까지 계속 반복
+    words = input().lower() # 인풋을 소문자로 받아줌, 비교 편하게 하기 위해
     
-    if word == '#' :
+    if words == '#' : # break 조건 = input에 '#' 들어올 때
         break
 
-    idx = word[0]
-    cnt = 0
-    for i in word :
-        if idx == i :
-            cnt += 1
+    idx = words[0] # 배열의 맨 앞에 비교할 소문자를 idx로 설정
+    cnt = 0 # 몇 번 나타내는지 카운트해줄 변수
+    for i in words : # 배열을 돌면서
+        if idx == i : # idx가 각 문자와 같다면
+            cnt += 1 # 카운트
             
-    print(idx, cnt-1)
+    print(idx, cnt-1) # 배열의 맨 앞부터 돌기 때문에
+                    # 즉, 본인도 카운트하기 때문에 cnt-1로 출력

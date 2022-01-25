@@ -25,13 +25,16 @@ NE
 
 '''
 
-N, W, H = map(int, input().split())
+N, W, H = map(int, input().split()) # 성냥 개수, 가로 크기, 세로 크기 받기
 
-for i in range(N) :
-    matches = int(input())
+for i in range(N) : # 성냥 개수만큼
+    matches = int(input()) # 성냥 길이 input 받기
     
-    if (W**2 + H**2)**(1/2) >= matches :
-        print('DA')
+    # 피타고라스의 정리, 대각선 길이보다 성냥 길이가 작으면 무조건 들어감
+    # a**2 + b**2 = c**2 공식 이용
+    
+    if (W**2 + H**2)**(1/2) >= matches : # a**2 + b**2에 루트 씌워서 성냥 길이와 비교
+        print('DA') # 성냥이 더 짧거나 같으면  DA
         
     else :
-        print('NE')
+        print('NE') # 성냥이 더 길면 NE

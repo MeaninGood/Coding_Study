@@ -32,17 +32,17 @@ NO
 
 '''
 
-T = int(input())
+T = int(input()) # 테스트케이스 개수
 
-for i in range(T) :
-    if input() == '' : 
-        N = int(input())
-        candy = 0
-        for j in range(N) :
-            candy += int(input())
+for i in range(T) : # 테스트케이스만큼 반복문 생성
+    if input() == '' : # T를 공백으로 구분, 공백을 넣을 때만 다음 input() 생기게 함
+        N = int(input()) # 첫 줄 학생 수 N창만 먼저 생성
+        candy = 0 # 사탕 개수 저장한 변수
+        for j in range(N) : # 학생 수 N을 돌면서
+            candy += int(input()) # 인풋창 N개를 만들어 사탕 개수로 바로 합쳐줌
         
-        if candy % N == 0 :
-            print('YES')
+        if candy % N == 0 : # 사탕 수 % 학생 수 == 0 이면 (딱 맞게 나눠줄 수 있으면)
+            print('YES') 
     
         else :
             print('NO')

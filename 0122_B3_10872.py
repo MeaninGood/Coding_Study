@@ -14,13 +14,13 @@
 
 '''
 
-def factorial(n) :
-    while 1 :
-        if n == 0 or n == 1 :
-            return 1
+def factorial(n) : # 팩토리얼 재귀 함수 생성
+    while 1 : 
+        if n == 0 or n == 1 : # n이 0이거나 1일 때 종료
+            return 1 # 1 반환
     
         else :
-            return n * factorial(n-1)
+            return n * factorial(n-1) # n * f(n-1)을 계속해서 리턴하는 구조
     
 n = int(input())    
 print(factorial(n))

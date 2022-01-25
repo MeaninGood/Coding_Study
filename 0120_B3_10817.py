@@ -15,8 +15,10 @@
 
 '''
 
-numbers = list(map(int, input().split()))
+numbers = list(map(int, input().split())) # 세 정수를 하나의 리스트로 받음
 
-numbers.sort()
+numbers.sort() # 오름차순 정렬
 
-print(numbers[1])
+print(numbers[1]) # 가운데 출력
+                # 정수는 무조건 3개만 들어옴
+                # 가운데 있는 게 무조건 두 번째로 큰 정수
