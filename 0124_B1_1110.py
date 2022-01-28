@@ -19,26 +19,21 @@
 
 '''
 
-# n = int(input())
-
-
-# while n == result :
-#     result = 
     
 n = int(input())
 
-cnt = 0
-new = n
+cnt = 0 # 싸이클 길이 카운트하는 변수
+new = n # n 값 고정하려고 둔 변수 new // 왜냐면 while문 돌면서 값이 계속 바뀔 것임
 
 while 1 :
     
-    temp = n//10 + n%10
-    result = (n%10)*10 + temp%10
-    cnt += 1
-    n = result
+    temp = n//10 + n%10 # 임시변수 : 26 -> 2 + 6
+    result = (n%10)*10 + temp%10  # 계산 값 2 + 6 = 8 // 68
+    cnt += 1 # 카운트 +1 해줌
+    n = result # n을 result로 
         
-    if new == result :
-        break
+    if new == result : # 고정해둔 첫 n과 싸이클을 돌고 난 후 result가 같으면
+        break # break
     
 print(cnt)
     
