@@ -17,15 +17,17 @@ zelena paprika
 
 '''
 
-m = input().split()
+
+
+m = input()
 
 li = ['apa', 'epe', 'ipi', 'opo', 'upu']
-
-for value in m:
-    for i in range(len(value)):
-        for j in range(0, )
-        
-
+      
+for i in li : # li 리스트에 각각의 모음set 만들어 둠
+    if i in m : # 리스트의 원소 i가 입력받은 m에 있다면
+       m = m.replace(i[0:3], i[0]) # 알파벳을 하나로 줄여줌
+                                    # apa -> a, epe -> e ...
+print(m)
 
 
     

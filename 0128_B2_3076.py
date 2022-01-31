@@ -17,7 +17,7 @@
 (출력)
 XX..XX..
 XX..XX..
-..XX..X
+..XX..XX
 ..XX..XX
 
 '''
@@ -25,13 +25,26 @@ XX..XX..
 r, c = map(int, input().split())
 a, b = map(int, input().split())
 
-for row in range(r):
-    res = ''
-    for column in range(c):
-        val1 = 'X' * b
-        val2 = '.' * b
-        res += val1 + val2
-    for i in range(a):
-        if i % 2:
-            
+res1 = ''
+for column in range(c) :
+    if column % 2 :
+        res1 += '.' * b
+    else :
+        res1 += 'X' * b
 
+res2 = ''
+for column in range(c) :
+    if column % 2 :
+        res2 += 'X' * b
+    else :
+        res2 += '.' * b
+        
+tt = ''
+for row in range(r) :
+    if row % 2 :
+        tt += (res2+'\n') * a
+        
+    else :
+        tt += (res1+'\n') * a
+        
+print(tt)
