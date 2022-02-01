@@ -37,26 +37,62 @@
 
 # print(total)
 
+
+
+
+# import sys
+# n, l = map(int, sys.stdin.readline().split())
+
+# li = []
+# for _ in range(n) :
+#     d, r, g = map(int, sys.stdin.readline().split())
+#     li.append([d, r, g])
+
+# t = 1
+# tr = [li[0][0]]
+# for i in range(len(li)-1) :
+#     tr.append(li[i+1][0] - li[i][0])
+
+# for i in range(len(li)) :
+#     if tr[i] > li[i][1] + li[i][2] :
+#         t += tr[i] % (li[i][1] + li[i][2])
+        
+#     else :
+#         t += (li[i][1] + li[i][2]) % tr[i]
+        
+# total = l + t
+
+# print(total)
+
+
+
 import sys
 n, l = map(int, sys.stdin.readline().split())
 
-li = []
+li = [[0,0,0]]
 for _ in range(n) :
     d, r, g = map(int, sys.stdin.readline().split())
     li.append([d, r, g])
-
-t = 1
-tr = [li[0][0]]
+    
+t = li[1][0] - li[0][0]  
 for i in range(len(li)-1) :
-    tr.append(li[i+1][0] - li[i][0])
-
-for i in range(len(li)) :
-    if tr[i] > li[i][1] + li[i][2] :
-        t += tr[i] % (li[i][1] + li[i][2])
+    dis = li[i+1][0] - li[i][0]
+    dr = li[i+1][1] + li[i+1][2]
+    print(dis)
+    print(dr)
+    print(li[i+1][1])
+    print(li[i+1][1] - dis)
+    if t % dr == 0 :
+        t += li[i+1][1]
         
+    elif t % dr < li[i+1][1] :
+        t += li[i+1][1] - dis
+        
+    # elif dis % dr >= li[i+1][1] :
+        # t += 0
+    
     else :
-        t += (li[i][1] + li[i][2]) % tr[i]
-        
-total = l + t
+        t += 0
 
-print(total)
+    
+print(t)
