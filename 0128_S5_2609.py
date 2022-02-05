@@ -23,8 +23,9 @@ max_num = max(n, m)
 min_num = min(n, m)
 gcm_li = [] # 최대 공약수
 lcm_li = [] # 최소 공배수
+
 gcm = 0
-lcm = 999999999
+lcm = 999999999  
 # def solve(n, m):
    
 for i in range(1, min_num+1) :
