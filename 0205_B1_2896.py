@@ -25,3 +25,30 @@
 
 '''
 
+a, b, c = map(int, input().split())
+i, j, k = map(int, input().split())
+
+res = min(a/i, b/j, c/k)
+
+x = a - i*res
+y = b - j*res
+z = c - k*res
+
+print(f'{x:.6f} {y:.6f} {z:.6f}')
+
+
+
+'''
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+mn = 1000000000
+for i in range(3):
+    mn = min(mn, a[i] / b[i])
+
+for i in range(3):
+    a[i] -= mn * b[i]
+
+print(*a)
+
+'''
