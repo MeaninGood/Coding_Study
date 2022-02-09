@@ -25,11 +25,17 @@
 
 '''
 
+# 코드 1, 개별 변수로 직접 받기
+
+# 입력 각각 따로 받아줌
 a, b, c = map(int, input().split())
 i, j, k = map(int, input().split())
 
+# 윗줄을 아랫줄의 변수로 나눈 값이 가장 작은 게 최대한 많이 만들 수 있는 칵테일
 res = min(a/i, b/j, c/k)
 
+# 각각  몇 잔을 만들 수 있는지 비율 곱해주기
+# 문제의 답에서 보면 i, j, k * min 을 한 후 전체 주스에서 뺐다는 걸 알 수 있음
 x = a - i*res
 y = b - j*res
 z = c - k*res
@@ -37,18 +43,24 @@ z = c - k*res
 print(f'{x:.6f} {y:.6f} {z:.6f}')
 
 
+# 코드 2, 리스트로 받기
 
-'''
+# 각 수들을 리스트로 받기
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
+# 임시로 높은 mn값 설정, 관련 없는 수
 mn = 1000000000
+
+# mn에 위와같이 윗줄[i]/아랫줄[i] 해준 후 최솟값 저장
 for i in range(3):
     mn = min(mn, a[i] / b[i])
 
+# a를 돌며 각 수에서 최솟값 * b[i] 해줌
 for i in range(3):
     a[i] -= mn * b[i]
 
+# a리스트 언패킹 후 프린트
 print(*a)
 
-'''
+

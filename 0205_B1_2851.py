@@ -58,11 +58,7 @@ for i in n :
         # 이전 합과 현재 합의 절댓값 비교
         # 예제 2번 87과 142라면 abs(142-100) = 42
         # abs(142-100-55) = 13 비교
-        if abs(score-100) < abs(score-100-i) : 
-            print(score)
-            break
-        
-        elif abs(score - 100) == abs(score-100-i) :
+        if abs(score-100) <= abs(score-100-i) : 
             print(score)
             break
 

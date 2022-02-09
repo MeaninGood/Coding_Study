@@ -34,6 +34,19 @@ for j in range(n) :
 result.sort() # 정렬해서
 print(*result) # 언패킹 후 프린트
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
 ### 이렇게 풀라는 거 아닌 것 같음 ###
 
