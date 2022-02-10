@@ -23,7 +23,6 @@ y = int((-2*a - ((2*a)**2 - 4*b)**0.5) / 2)
 
 if x == y :
     print(x)
-elif x < y :
-    print(x, y)
-else :
+else:
     print(y, x)
+

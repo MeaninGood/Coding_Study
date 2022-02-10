@@ -27,7 +27,7 @@ Case #3: base your all
 '''
 
 # 테스트케이스 개수
-n = int(input())
+n = int(input()) 
 
 # 케이스 번호 출력을 위해 range(1, n+1)로 설정
 for i in range(1, n+1):

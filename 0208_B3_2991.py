@@ -31,7 +31,7 @@ a, b, c, d = map(int, input().split())
 li = map(int, input().split())
 
 # 강아지별 사이클
-x = a + b
+x = a + b 
 y = c + d
 
 # 리스트를 돌면서

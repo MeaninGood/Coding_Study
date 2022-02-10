@@ -34,7 +34,7 @@
 import sys
 
 # 리스트로 입력 받아줌
-arr = [int(sys.stdin.readline()) for heit in range(9)]
+arr = [int(sys.stdin.readline()) for _ in range(9)]
 # arr = []
 # for heit in range(9) :
 #     arr.append(int(sys.stdin.readline()))
@@ -44,13 +44,12 @@ total = sum(arr) # 미리 합계 변수 지정
 
 arr.sort() # 정렬
 
-
 s = 0 # s = 0에서 시작
 e = 8 # e = 8에서 시작(리스트 인덱스 8까지니까)
 
 while s < e : # s == e가 되면 종료
     # 7명의 합이 100이 되는 애들이 아니라, 100이 안 되는 2명을 찾자
-    if arr[s] + arr[e] == total - 100 : # 탈출 조건 지정, total - 100해주면 됨
+    if arr[s] + arr[e] == total - 100 : # 탈출 조건 지정, total - 100해주면 됨 ## 40
         for i in range(9) : # 위의 리스트를 돌면서
             if i == s or i == e : # i가 s 혹은 e와 같으면 출력 안 하고 continue
                 continue
