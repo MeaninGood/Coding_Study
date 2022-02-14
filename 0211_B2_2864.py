@@ -23,6 +23,7 @@
 
 a, b = input().split()
 
+# 5 -> 6, 6 -> 5 바꿔서 더해주기
 min_a = int(a.replace('6', '5'))
 min_b = int(b.replace('6', '5'))
 max_a = int(a.replace('5', '6'))
