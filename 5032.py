@@ -40,4 +40,4 @@ for i in arr :
             rank += 1
     ans.append(rank)
         
-print(ans)
+print(ans) 
