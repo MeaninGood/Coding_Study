@@ -21,12 +21,12 @@
 e, f, c = map(int, input().split())
 
 cnt = 0 # 병 개수 카운트해줄 cnt
-temp = e + f # 초기 가지고 있는 빈 병 개수
+temp = e + f # 초기 가지고 있는 빈 병 개수 
 while 1:
     if temp < c : # 빈 병이 바꿀 수 있는 병 수보다 작을 때
         print(cnt)
         break
-    else : 
+    else :
         temp -= c # 빈 병에서 필요한 병 빼주기
         cnt += 1 # 한 번 빼줄 때마다 카운트 1씩 증가
         temp += 1 # 다 마신 병은 다시 빈 병으로 쓸 수 있기 때문에 temp에 추가해 줌

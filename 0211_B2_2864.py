@@ -21,7 +21,7 @@
 
 ''' 
 
-a, b = input().split()
+a, b = input().split() 
 
 # 5 -> 6, 6 -> 5 바꿔서 더해주기
 min_a = int(a.replace('6', '5'))

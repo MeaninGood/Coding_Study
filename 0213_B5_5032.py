@@ -31,10 +31,10 @@ for _ in range(n):
     # 람다식 쓰려고 튜플로 받았다가 정렬하면 안 돼서 람다식 못 썼음
     # 코드는 돌아가니까 그냥 두기,,
     arr.append(tuple(map(int, input().split())))
-    
+
 # b = sorted(arr, key = lambda x : (-x[0], -x[1])) : 쓰려던 람다식
 
-ans = [] # 출력해줄 리스트
+ans = [] # 출력해줄 리스트 
 for i in range(n) : # arr배열을 돌면서
     rank = 1 # 순위는 1위부터니까 rank = 1로 두기
             # 이 위치에 rank를 써야 함, 각 인덱스를 돌면서 rank=1로 초기화 해줄 것

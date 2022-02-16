@@ -23,7 +23,7 @@
 
 ''' 
 
-c, k = map(int, input().split())
+c, k = map(int, input().split()) 
 
 temp = c % 10**k # 짤짤이 계산해 줄 임시 변수 temp 
 num = 10**k / 2 # 반올림을 해도 되는지 안 되는지 계산해줄 변수 num

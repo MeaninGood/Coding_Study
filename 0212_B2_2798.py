@@ -22,7 +22,7 @@
 n, m = map(int, input().split())
 cards = list(map(int, input().split()))
 
-li = [] 
+li = []  
 
 # 세 장의 카드 합 그냥 3중 for문으로 구현하기
 for i in range(n-2) :
