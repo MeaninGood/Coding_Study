@@ -51,12 +51,13 @@ n = len(word)
 
 # R<=C R*C=N
 # 리스트 말고
-r = c = 0
-for i in range(1, n+1):
-    for j in range(n, 0, -1):
-        if i * j == n and i <= j :
-            r = i
+r = c = 0 
+
+for i in range(1, n+1): # 1부터 n+1까지 약수 구해줄 거임 r은 낮은 수 -> 높은 수
+    for j in range(n, 0, -1): # r * c 에서 c는 높은 수 -> 낮은 수
+        if i * j == n and i <= j : # 식 그대로 i * j가 n이고 i <= j일 때
+            r = i # 변수에 할당
             c = j
 
 for k in range(r):
-    print(word[k::r], end='')
+    print(word[k::r], end='') # r 간격으로 출력
