@@ -28,7 +28,7 @@
 
 arr = []
 for i in range(10):
-    n = int(input())%42 # 바로 42로 나눈 나머지로 값 받기
+    n = int(input()) % 42 # 바로 42로 나눈 나머지로 값 받기
     arr.append(n) # arr에 추가
     
 print(len(set(arr))) # set으로 중복 제거
