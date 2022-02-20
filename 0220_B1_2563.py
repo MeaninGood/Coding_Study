@@ -22,3 +22,21 @@
 260
 
 '''
+
+arr = [[0]*100 for i in range(100)] # 100 * 100 배열 생성
+
+t = int(input())
+for _ in range(t):
+    x, y = map(int, input().split())
+    
+    for i in range(x, x+10): # x좌표 ~ x + 10까지
+        for j in range(y, y+10): # y좌표 ~ y + 10까지
+            arr[i][j] += 1 # 다 1씩 추가
+
+cnt = 0 # 몇 칸인지 카운트해줄 변수
+for i in range(100): # 100 * 100 배열에서
+    for j in range(100):
+       if arr[i][j] != 0: # 0이 아닌 것들만 세어서 카운트
+           cnt += 1
+            
+print(cnt)
