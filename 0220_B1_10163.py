@@ -38,6 +38,7 @@ for n in range(1, t+1):
         for j in range(y1, y1+y2):
             arr[i][j] = n # n으로 바꿔줌
 
+''' 시간초과 53점
 idx = 1 # 색종이, 1번 색종이부터 시작
 while idx <= t: # idx가 t보다 작을 때 (테스트케이스)
     cnt = 0 # 카운트해줄 변수
@@ -48,3 +49,13 @@ while idx <= t: # idx가 t보다 작을 때 (테스트케이스)
     idx += 1 # idx +1씩 해줌
         
     print(cnt)
+'''
+
+# 카운팅 소트
+cnt = [0]*110 # 색종이 100장까지 까니까 넉넉하게 110칸
+for i in range(1010):
+    for j in range(1010):
+        cnt[arr[i][j]] += 1 # cnt 인덱스로 접근해서 += 1
+        
+for i in range(1, t+1):
+    print(cnt[i])
