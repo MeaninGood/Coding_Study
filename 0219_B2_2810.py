@@ -22,7 +22,7 @@ n = int(input())
 p = input()
 
 cnt = p.count('S') + p.count('LL') + 1 # S랑 LL개수 카운트
-                                        # 좌석 양 옆에 하나씩 더 있으니까 +!
+                                        # 좌석 양 옆에 하나씩 더 있으니까 +1
 if len(p) <= cnt : # 좌석의 개수(사람 수)가 컵홀더 수보다 작으면
     print(len(p)) # 사람 수 출력
 else:

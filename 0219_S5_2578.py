@@ -26,6 +26,20 @@
 15
 
 '''
+'''
+11 12 0 24 0
+0 1 13 3 25
+6 20 0 21 17
+19 4 8 14 9
+22 15 0 23 18
+'''
+'''
+5 10 7 16 2
+4 22 8 17 13
+3 18 1 6 25
+12 19 23 14 21
+11 24 9 20 15
+'''
 
 arr = [list(map(int, input().split())) for i in range(5)]
 nums = [list(map(int, input().split())) for i in range(5)]
@@ -55,7 +69,7 @@ def is_bingo():
         if cnt == 5:
             ret += 1
                 
-    cnt = 0
+    cnt = 0 
     for i in range(5):
         if arr[i][i] == 0:
             cnt += 1
@@ -73,7 +87,7 @@ def is_bingo():
     
     return ret >= 3 # ret이 이상인지 아닌지 T, F Return
 
-cnt = 0     
+cnt = 0
 for i in range(5):
     for j in range(5):
         cnt += 1
@@ -84,7 +98,3 @@ for i in range(5):
             print(cnt)
             exit()
         # 3. 몇 번째로 부른 숫자인지 출력 후 종료
-
-
-        
-        

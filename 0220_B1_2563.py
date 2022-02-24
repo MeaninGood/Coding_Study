@@ -30,7 +30,7 @@ for _ in range(t):
     x, y = map(int, input().split())
     
     for i in range(x, x+10): # x좌표 ~ x + 10까지
-        for j in range(y, y+10): # y좌표 ~ y + 10까지
+        for j in range(y, y+10): # y좌표 ~ y + 10까
             arr[i][j] += 1 # 다 1씩 추가
 
 cnt = 0 # 몇 칸인지 카운트해줄 변수
