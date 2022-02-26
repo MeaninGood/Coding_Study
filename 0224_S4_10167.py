@@ -57,8 +57,8 @@ if n > r*c : # n이 범위보다 큰 경우
     print(0) # 0출력
 
 else : # 아니면
-    for i in range(1, r):
-        for j in range(1, c):
+    for i in range(r):
+        for j in range(c):
             if arr[i][j] == n:
                 print(i+1, j+1) # 좌표값 +1씩 해서 출력 0,0부터 시작했기 때문
                 exit()
