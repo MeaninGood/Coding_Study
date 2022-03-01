@@ -1,4 +1,4 @@
-# 2491번_수열
+# 2559번_수열
 
 ## 정수의 수열에서 연속적인 몇 개의 합이 가장 큰 값을 계산하는 프로그램
 
@@ -40,26 +40,40 @@
     
 # print(max(dp))
 
-n, k = map(int, input().split())
-arr = list(map(int, input().split()))
+# n, k = map(int, input().split())
+# arr = list(map(int, input().split()))
 
-li = [0] * (n - k + 1)
+# li = [0] * (n - k + 1)
 
-s = 0
-e = 0
-total = arr[0]
-while e < n:
-    if s > n - k:
-        li[s-1] == total
-        break
+# s = 0
+# e = 0
+# total = arr[0]
+# while e < n:
+#     if s > n - k:
+#         li[s-1] == total
+#         break
 
-    if e < s + k - 1:
-        e += 1
-        total += arr[e]
+#     if e < s + k - 1:
+#         e += 1
+#         total += arr[e]
         
-    else:
-        li[s] = total
-        total -= arr[s]
-        s += 1
+#     else:
+#         li[s] = total
+#         total -= arr[s]
+#         s += 1
 
-print(max(li))    
+# print(max(li))
+
+# n, k = map(int, input().split())
+# arr = list(map(int, input().split()))
+
+# res = 0
+# total = sum(arr[0:k])
+# for i in range(1, n - k + 1):
+#     total += arr[i+k-1]
+#     total -= arr[i]
+    
+#     if total > res:
+#         res = total
+    
+# print(res)
