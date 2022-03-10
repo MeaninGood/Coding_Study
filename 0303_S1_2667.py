@@ -25,3 +25,36 @@
 4
 
 '''
+
+dx = [0, 1, 0, -1]
+dy = [1, 0, -1, 0]
+def dfs(x, y):
+    ret = 1
+    visited[x][y] = True
+    
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        
+        if not (0 <= nx < n and 0 <= ny < n) or arr[nx][ny] != 1 or visited[nx][ny]:
+            continue
+        
+        ret += dfs(nx, ny)
+    return ret
+
+n = int(input())
+arr = [list(map(int, input())) for _ in range(n)]
+
+visited = [[False]*n for _ in range(n)]
+
+cnt = 0
+li = []
+for i in range(n):
+    for j in range(n):
+        if arr[i][j] == 1 and not visited[i][j]:
+            cnt += 1
+            li.append(dfs(i, j))
+            
+li.sort()
+print(cnt)
+print(*li, sep='\n')

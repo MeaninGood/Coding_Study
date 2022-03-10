@@ -27,39 +27,9 @@
 
 '''
 
-# n = int(input())
-# arr = [list(map(int, input().split())) for i in range(n)]
-
-# visited = [[False]*110 for i in range(110)]
-
-# dx = [0, 1, 0, -1]
-# dy = [1, 0, -1, 0]
-# mx = 0
-# def dfs(x, y):
-#     global mx
-#     ret = 1
-#     i = 1
-#     visited[x][y] = True
-
-#     for j in range(4):
-#         nx = x + dx[j]
-#         ny = y + dy[j]
-        
-#         if not (0 <= nx < n and 0 <= ny < n) or visited[nx][ny] or arr[nx][ny] < i:
-#             continue
-    
-#         if ret > mx:
-#             mx = ret
-            
-#         ret += dfs(nx, ny)
-            
-#     visited[nx][ny] = False
-#     i += 1
-#     return mx
-
-# print(dfs(0,0))
-
-            
+import sys
+sys.setrecursionlimit(100000) 
+     
 n = int(input())
 arr = [list(map(int, input().split())) for i in range(n)]
 
