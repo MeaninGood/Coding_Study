@@ -124,9 +124,7 @@ mx = -100000
 for i in range(n+1):
     ans.append(bfs(i))
     mx = max(mx, ans[i])
-    
-print(ans)
-print(mx)  
+      
 for c in range(len(ans)):
     if mx == ans[c]:
         print(c, end=' ')
