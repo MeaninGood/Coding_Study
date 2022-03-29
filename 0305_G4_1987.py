@@ -20,7 +20,7 @@ HFDFFB
 AJHGDH
 DGAGEH
 
-(출력) 
+(출력)  
 6
 
 '''
