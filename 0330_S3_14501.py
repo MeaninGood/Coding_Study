@@ -47,3 +47,54 @@ n = int(input())
 arr = [list(map(int, input().split())) for i in range(n)]
 
 print(recur(0))
+
+
+
+'''
+1. dp 배열 생성
+2. 기저 아래에 if dp[cur] != -1 : return dp[cur] 써주기
+3. dp[cur] = total을 맨 밑 return 위에 써주기
+4. return dp[cur]로 바꿔주기
+
+'''
+
+
+'''
+원래 백트래킹 코드
+
+n = int(input())
+arr = [list(map(int, input().split())) for i in range(n)]
+
+ans = 0
+
+def recur(cur, total):
+    global ans
+
+    if cur > n:
+        return
+
+    if cur == n:
+        ans = max(ans, total)
+        return
+
+    recur(cur + arr[cur][0], total + arr[cur][1]) # 일을 한다
+    recur(cur + 1, total) # 일을 안 한다
+
+
+recur(0)
+
+'''
+
+
+'''
+줄인 코드
+def recur(cur):
+    if cur > n:
+        return -1000000000
+
+    if cur == n:
+        return 0
+
+    return max(recur(cur + arr[cur][0]) + arr[cur][1], recur(cur + 1))
+
+'''
