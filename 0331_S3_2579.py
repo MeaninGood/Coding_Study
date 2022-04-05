@@ -103,28 +103,28 @@ arr = [int(input()) for _ in range(n)]
 print(max(recur(0, 0), recur(1, 0)))
 
 
-# dp = [[-1, -1] for i in range(310)]
+dp = [[-1, -1] for i in range(310)]
 
-# def recur(cur, c1):
-#     if c1 >= 2:
-#         return -1000000000
+def recur(cur, c1):
+    if c1 >= 2:
+        return -1000000000
 
-#     if cur >= n:
-#         return -1000000000
+    if cur >= n:
+        return -1000000000
 
-#     if cur == n - 1:
-#         return arr[cur]
+    if cur == n - 1:
+        return arr[cur]
 
-#     if dp[cur][c1] != -1:
-#         return dp[cur][c1]
+    if dp[cur][c1] != -1:
+        return dp[cur][c1]
 
-#     ret = max(recur(cur + 1, c1 + 1), recur(cur + 2, 0))
+    ret = max(recur(cur + 1, c1 + 1), recur(cur + 2, 0))
 
-#     dp[cur][c1] = ret + arr[cur]
+    dp[cur][c1] = ret + arr[cur]
 
-#     return ret + arr[cur]
+    return ret + arr[cur]
 
 
-# n = int(input())
-# arr = [int(input()) for _ in range(n)]
-# print(max(recur(0, 0), recur(1, 0)))
+n = int(input())
+arr = [int(input()) for _ in range(n)]
+print(max(recur(0, 0), recur(1, 0)))
