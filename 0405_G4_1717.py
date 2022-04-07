@@ -72,7 +72,7 @@ for i in range(m):
     else:
         if find_(b) == find_(c):
             print('YES')
-        else:
+        else: 
             print('NO')
     
    

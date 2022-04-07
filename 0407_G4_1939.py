@@ -60,12 +60,12 @@ s, e = map(int, input().split())
 par = [i for i in range(n + 1)]
 rnk = [0 for i in range(n + 1)]
 sz = [1 for i in range(n + 1)]
-
+ 
 v.sort(key=lambda x: -x[2])
 
 for i in range(m):
     union_(v[i][0], v[i][1])
-    
+    # print(rnk[v[i][0]], rnk[v[i][1]])
     if find_(s) == find_(e):
         print(v[i][2])
         break
