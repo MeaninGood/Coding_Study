@@ -18,9 +18,49 @@
 
 '''
 
-import heapq
+# import heapq
 
-s, e = map(int, input().split())
+# s, e = map(int, input().split())
+# # v = [[i, 0] for i in range(100010)]
+# dist = [1000000000 for i in range(100010)]
+
+# def in_range(x):
+#     return 0 <= x < 100010
+
+# pq = []
+# dist[s] = 0
+# heapq.heappush(pq, (0, s))
+# while len(pq) > 0:
+#     d, cur = heapq.heappop(pq)
+    
+#     if cur == e:
+#         print(dist[cur])
+#         break
+    
+#     if dist[cur] != d:
+#         continue
+    
+#     for i in [cur - 1, cur + 1, cur * 2]:
+#         nxt = i
+#         nd = dist[cur] + 1
+        
+#         if not in_range(nxt):
+#             continue
+        
+#         if i == cur * 2:
+#             nxt = i
+#             nd = dist[cur]
+        
+#         if dist[nxt] > nd:
+#             dist[nxt] = nd
+#             heapq.heappush(pq, (nd, nxt))
+            
+
+
+import heapq
+import sys
+si = sys.stdin.readline
+s, e = map(int, si().split())
 # v = [[i, 0] for i in range(100010)]
 dist = [1000000000 for i in range(100010)]
 
@@ -31,6 +71,8 @@ pq = []
 dist[s] = 0
 heapq.heappush(pq, (0, s))
 while len(pq) > 0:
+
+    
     d, cur = heapq.heappop(pq)
     
     if cur == e:
@@ -54,4 +96,3 @@ while len(pq) > 0:
         if dist[nxt] > nd:
             dist[nxt] = nd
             heapq.heappush(pq, (nd, nxt))
-            
