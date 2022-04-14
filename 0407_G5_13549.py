@@ -4,7 +4,7 @@
 ## 수빈이의 위치가 X일 때 걷는다면 1초 후에 X-1 또는 X+1로 이동
 ## 순간이동을 하는 경우에는 0초 후에 2*X의 위치로 이동
 ## 수빈이와 동생의 위치가 주어졌을 때, 수빈이가 동생을 찾을 수 있는 가장 빠른 시간이 몇 초 후인지 구하기
-
+ 
 
 '''
 # 첫 번째 줄에 수빈이가 있는 위치 N과 동생이 있는 위치 K가 주어짐. N과 K는 정수
@@ -18,7 +18,7 @@
 
 '''
 
-# import heapq
+# import heapqS
 
 # s, e = map(int, input().split())
 # # v = [[i, 0] for i in range(100010)]
@@ -67,12 +67,12 @@ dist = [1000000000 for i in range(100010)]
 def in_range(x):
     return 0 <= x < 100010
 
+
 pq = []
 dist[s] = 0
 heapq.heappush(pq, (0, s))
-while len(pq) > 0:
 
-    
+while len(pq) > 0:
     d, cur = heapq.heappop(pq)
     
     if cur == e:
