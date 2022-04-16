@@ -80,7 +80,7 @@ def get_dist(s):
                 heapq.heappush(pq, (nd, nxt))
                 
     return dist
-                
+                 
     
 n, m = map(int, input().split())
 v = [[] for _ in range(n + 1)]
