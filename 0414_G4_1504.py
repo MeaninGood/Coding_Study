@@ -56,6 +56,61 @@ input = sys.stdin.readline
 #                 dist[nxt] = nd
 #                 heapq.heappush(pq, (nd, nxt))
         
+        
+        
+ 
+### 다익스트라 3번 돌리기       
+# import sys, heapq
+# input = sys.stdin.readline
+
+# def get_dist(s):
+#     pq = []
+#     dist = [1000000000 for _ in range(n + 1)]
+#     dist[s] = 0
+
+#     heapq.heappush(pq, (0, s))
+
+#     while pq:
+#         d, cur = heapq.heappop(pq)
+        
+#         if dist[cur] != d:
+#             continue
+        
+#         for nxt, nd in v[cur]:
+#             nd += d
+            
+#             if dist[nxt] > nd:
+#                 dist[nxt] = nd
+#                 heapq.heappush(pq, (nd, nxt))
+                
+#     return dist
+                 
+    
+# n, m = map(int, input().split())
+# v = [[] for _ in range(n + 1)]
+# for _ in range(m):
+#     a, b, c = map(int, input().split())
+#     v[a].append([b, c])
+#     v[b].append([a, c])
+
+# v1, v2 = map(int, input().split())
+
+
+# ds = get_dist(1)
+# dv1 = get_dist(v1)
+# dv2 = get_dist(v2)
+
+# ans = min(ds[v1] + dv1[v2] + dv2[n], ds[v2] + dv2[v1] + dv1[n])
+
+# if ans >= 1000000000:
+#     print(-1)
+# else:
+#     print(ans)
+    
+    
+    
+### 다익스트라 2번 돌리기
+
 import sys, heapq
 input = sys.stdin.readline
 
@@ -92,11 +147,10 @@ for _ in range(m):
 v1, v2 = map(int, input().split())
 
 
-ds = get_dist(1)
 dv1 = get_dist(v1)
 dv2 = get_dist(v2)
 
-ans = min(ds[v1] + dv1[v2] + dv2[n], ds[v2] + dv2[v1] + dv1[n])
+ans = min(dv1[1] + dv1[v2] + dv2[n], dv2[1] + dv2[v1] + dv1[n])
 
 if ans >= 1000000000:
     print(-1)
