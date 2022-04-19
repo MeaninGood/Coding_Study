@@ -41,7 +41,7 @@ while s <= e:
     
     elif total < m:
         e += 1
-        
+         
         if e >= n :
             break
         

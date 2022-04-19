@@ -32,7 +32,7 @@ dp[3] = 1
 dp[4] = 2
 dp[5] = 3
 dp[6] = 2
-
+ 
 ans = [n]
 if n > 6:
     for i in range(6, n + 1):

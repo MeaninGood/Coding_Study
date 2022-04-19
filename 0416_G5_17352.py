@@ -58,20 +58,18 @@ for i in range(n - 2):
 
     union_(a, b)
 
-
+print(par)
 
 for i in range(1, n + 1):
     par[i] = find_(par[i])
-    
+
+print(par)
 tmp = par[1]
 idx = 1
 for i in range(2, n + 1):
     if par[i] != tmp:
         print(idx, i)
         break
-
-
-
 
     
     

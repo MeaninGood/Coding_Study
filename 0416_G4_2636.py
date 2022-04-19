@@ -41,6 +41,7 @@
 
 import sys
 import heapq
+from pprint import pprint
 si = sys.stdin.readline
 
 def in_range(x, y):
@@ -78,10 +79,11 @@ def get_dist(x, y, arr):
 
 n, m = map(int, si().split())
 arr = [list(map(int, si().split())) for _ in range(n)]
-dist = [[1000000000 for _ in range(m + 1)] for j in range(n + 1)]
+dist = [[1000000000 for _ in range(m)] for j in range(n)]
 
 get_dist(0, 0, arr)
 
+pprint(dist)
 
 
 mx = 0
@@ -94,7 +96,17 @@ else:
     for i in range(n):
         for j in range(m):
             if dist[i][j] == mx and arr[i][j] == 1:
+            # if dist[i][j] == mx:
                 cnt += 1
                 
     print(mx)
     print(cnt)
+
+'''
+5 5 
+0 0 0 0 0
+0 1 1 1 0
+0 1 0 1 0
+0 1 1 1 0
+0 0 0 0 0
+'''
