@@ -39,17 +39,10 @@ d = {}
 for i in range(m):
     d[ans[i]] = d.get(i, 0)
     
-print(d)
 arr = sorted(ans)
-
-# print(v)
-# print(ans)
-# print(arr)
 
 s = 0
 e = 0
-
-# print(ans.index(arr[1]))
 
 tmp = []
 
@@ -65,8 +58,5 @@ while s < n and e < m:
         s += 1
         e += 1
 
-print(d)
-
 for i in d:
     print(d[i], end = ' ')
-# print(*ans)
