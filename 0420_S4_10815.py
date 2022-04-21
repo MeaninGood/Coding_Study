@@ -32,7 +32,7 @@ input = sys.stdin.readline
 
 n = int(input())
 v = sorted(list(map(int, input().split())))
-m = int(input())
+m = int(input()) 
 ans = list(map(int, input().split()))
 
 d = {}
