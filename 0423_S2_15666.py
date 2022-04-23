@@ -28,24 +28,49 @@
 
 '''
 
+# m, n = map(int, input().split())
+# arr = list(map(int, input().split()))
+# arr.sort()
+
+# v = [0 for i in range(n)]
+# visited = [False for i in range(m)]
+# def recur(cur, start):
+#     if cur == n:
+#         print(*v)
+#         return
+    
+#     for i in range(start, m):
+#         if visited[i]:
+#             continue
+        
+#         visited[cur] = True
+#         v[cur] = arr[i]
+#         recur(cur + 1, i + 1)
+#         visited[cur] = False
+        
+# recur(0, 0)
+
+
+
+
 m, n = map(int, input().split())
-arr = list(map(int, input().split()))
+arr = set(map(int, input().split())) # 미리 중복 제거해서 받기
+arr = list(arr) # 정렬할 거니까 list로 만들기
 arr.sort()
 
+
+e = len(arr) # 중복 제거한 arr의 길이 구해줌
 v = [0 for i in range(n)]
-visited = [False for i in range(m)]
+
 def recur(cur, start):
-    if cur == n:
-        print(*v)
+    if cur == n: # n만큼의 자리가 다 차면
+        print(*v) # v에 채워진 값 print
         return
     
-    for i in range(start, m):
-        if visited[i]:
-            continue
-        
-        visited[i] = True
-        v[i] = arr[i]
-        recur(cur + 1, i + 1)
-        visited[i] = False
+    for i in range(start, e):       # 중복 제거한 arr를 돌면서
+        v[cur] = arr[i]             # v 채워주기
+        recur(cur + 1, i)           # v[cur] = arr[i]이므로 v자리 채워주기
+                                    # 같은 수를 배열에 담을 수 있으므로
+                                    # (cur + 1, i)로 재귀 호출
         
 recur(0, 0)
