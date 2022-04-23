@@ -40,7 +40,7 @@ for i in range(m):
     d[ans[i]] = d.get(i, 0)
     
 arr = sorted(ans)
-
+print(d)
 s = 0
 e = 0
 
@@ -58,5 +58,6 @@ while s < n and e < m:
         s += 1
         e += 1
 
+print(d)
 for i in d:
     print(d[i], end = ' ')
