@@ -29,7 +29,7 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 arr = [0] + list(map(int, input().split()))             # 한그릇도 배열 만드려고 0으로 패딩
-
+ 
 def get_dist(s):
     pq = []
 

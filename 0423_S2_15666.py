@@ -29,7 +29,7 @@
 '''
 
 m, n = map(int, input().split())
-arr = list(map(int, input().split()))
+arr = list(set(map(int, input().split())))
 arr.sort()
 
 v = [0 for i in range(n)]
@@ -45,7 +45,7 @@ def recur(cur, start):
         
         visited[i] = True
         v[i] = arr[i]
-        recur(cur + 1, i + 1)
+        recur(cur + 1, i)
         visited[i] = False
         
 recur(0, 0)
