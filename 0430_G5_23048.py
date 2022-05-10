@@ -20,7 +20,7 @@ for i in range(2, n + 1):
         sieve[j] = False
         v[j] = idx
     
-    
+     
 v.pop(0)
 print(idx)
 print(*v)

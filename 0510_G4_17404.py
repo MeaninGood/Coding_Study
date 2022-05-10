@@ -1,12 +1,12 @@
 n = int(input())
 arr = [[0 for i in range(3)]] + [list(map(int, input().split())) for i in range(n)]
-ans = 1000000000
 
+ans = 1000000000
 for k in range(3):
     dp = [[0 for i in range(3)] for j in range(n + 1)]
     for i in range(3):
         if i == k:
-            dp[1][i] = arr[1][i]
+            dp[1][i] = arr[1][i] 
         else:
             dp[1][i] = 100000000
                     
@@ -24,7 +24,7 @@ for k in range(3):
 
             dp[i][j] = mn + arr[i][j]
 
-        mn = 1000000
+        mn = 10000000
         for j in range(3):
             if j == midx:
                 continue
@@ -32,13 +32,10 @@ for k in range(3):
             mn = min(mn, dp[i - 1][j])
 
         dp[i][midx] = mn + arr[i][midx]
-
-    
     
     for i in range(3):
         if i == k:
             continue
         ans = min(ans, dp[n][i])
-
 
 print(ans)

@@ -6,11 +6,13 @@ def recur(cur, total, idx, e):
         v[idx].append(total)
         return
     
+    # 고른다
     recur(cur + 1, total + arr[cur], idx, e)
+    # 안 고른다
     recur(cur + 1, total, idx, e)
 
 n, m = map(int, input().split())
-arr = list(map(int, input().split()))
+arr = list(map(int, input().split())) 
 v = [[] for _ in range(2)]
 
 recur(0, 0, 0, n // 2)
@@ -19,6 +21,7 @@ recur(n // 2, 0, 1, n)
 v[0].sort()
 v[1].sort()
 
+print(v)
 s = 0
 e = len(v[1]) - 1
 cnt = 0
