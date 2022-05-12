@@ -11,7 +11,7 @@ for i in range(n):
     
     for j in range(3):
         dp1[idx1][j] = 0
-        dp2[idx2][j] = 1 << 30
+        dp2[idx2][j] = 1 << 30 
         
         for k in range(3):
             if abs(j - k) >= 2:
@@ -21,6 +21,6 @@ for i in range(n):
             dp2[idx2][j] = min(dp2[idx2][j], dp2[idx2 ^ 1][k] + arr[j])
 
     idx1 ^= 1
-    idx2 ^= 1
+    idx2 ^= 1 
 
 print(max(dp1[idx1 ^ 1]), min(dp2[idx2 ^ 1]))

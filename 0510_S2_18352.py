@@ -9,7 +9,7 @@ def bfs(s):
     que.append(s)
     visited[s] = True
     
-    ret = 0
+    ret = 0 
     ans = []
     while que:
         size = len(que)
